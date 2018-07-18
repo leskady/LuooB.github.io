@@ -166,34 +166,58 @@
 <p>大家好，我是青岛新思科的June，这篇博客说一下怎样安装ASAv981 以及 telnet连接（因为默认是vnc，很不好用）</p>
 <hr>
 <h2 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h2><h4 id="ASAv981镜像一只（在群文件懒人包）"><a href="#ASAv981镜像一只（在群文件懒人包）" class="headerlink" title="ASAv981镜像一只（在群文件懒人包）"></a>ASAv981镜像一只（在群文件懒人包）</h4><h4 id="搭建好的GNS3环境一套（没有安装好的请移步GNS3详细安装步骤）"><a href="#搭建好的GNS3环境一套（没有安装好的请移步GNS3详细安装步骤）" class="headerlink" title="搭建好的GNS3环境一套（没有安装好的请移步GNS3详细安装步骤）"></a>搭建好的GNS3环境一套（没有安装好的请移步<a href="https://luooob.github.io/LuooB.github.io/2018/06/29/GNS3%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" target="_blank" rel="noopener">GNS3详细安装步骤</a>）</h4><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><ol>
-<li><h5 id="打开GNS3环境，将Security-devices一栏选中为installed-amp-Avibalabala"><a href="#打开GNS3环境，将Security-devices一栏选中为installed-amp-Avibalabala" class="headerlink" title="打开GNS3环境，将Security devices一栏选中为installed&amp;Avibalabala"></a>打开GNS3环境，将<strong><em>Security devices</em></strong>一栏选中为<strong><em>installed&amp;Avibalabala</em></strong><img src="1.png" alt="1"></h5></li>
-<li><h5 id="找到下面的Cisco-ASAv"><a href="#找到下面的Cisco-ASAv" class="headerlink" title="找到下面的Cisco ASAv                "></a>找到下面的Cisco ASAv                <img src="2.png" alt="2"></h5></li>
-<li><h5 id="将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。"><a href="#将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。" class="headerlink" title="将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。"></a>将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。<img src="3.png" alt="3"></h5></li>
-<li><h5 id="next-不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote-server，这里注意一下，run-on-这一栏，填的就是-之前我说的-server里面的名字。不清楚的，回看GNS3安装步骤。-4-4-png"><a href="#next-不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote-server，这里注意一下，run-on-这一栏，填的就是-之前我说的-server里面的名字。不清楚的，回看GNS3安装步骤。-4-4-png" class="headerlink" title="next  不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote server，这里注意一下，run on 这一栏，填的就是 之前我说的 server里面的名字。不清楚的，回看GNS3安装步骤。![4]4.png)"></a>next  不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote server，这里注意一下，run on 这一栏，填的就是 之前我说的 server里面的名字。不清楚的，回看GNS3安装步骤。![4]4.png)</h5></li>
-<li><h5 id="next不解释。"><a href="#next不解释。" class="headerlink" title="next不解释。"></a>next不解释。<img src="5.png" alt="5"></h5></li>
-<li><h5 id="这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。"><a href="#这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。" class="headerlink" title="这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。"></a>这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。<img src="6.png" alt="6"></h5></li>
-<li><h5 id="我们选中asav981-qcow2，左下角就出现import按钮。"><a href="#我们选中asav981-qcow2，左下角就出现import按钮。" class="headerlink" title="我们选中asav981.qcow2，左下角就出现import按钮。 "></a>我们选中asav981.qcow2，左下角就出现<em>import</em>按钮。 <img src="7.png" alt="7"></h5></li>
-<li><h5 id="我们点击import之后，选择本地的asav981-qcow2文件，然后确定。"><a href="#我们点击import之后，选择本地的asav981-qcow2文件，然后确定。" class="headerlink" title="我们点击import之后，选择本地的asav981.qcow2文件，然后确定。"></a>我们点击import之后，选择本地的asav981.qcow2文件，然后确定。<img src="8.png" alt="8"></h5></li>
-<li><h5 id="next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。"><a href="#next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。" class="headerlink" title="next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。"></a>next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。<img src="9.png" alt="9"></h5></li>
-<li><h5 id="进度条跑完以后。之前found就变成了ready-to-install-。next-不多bibi。"><a href="#进度条跑完以后。之前found就变成了ready-to-install-。next-不多bibi。" class="headerlink" title="进度条跑完以后。之前found就变成了ready to install  。next  不多bibi。"></a>进度条跑完以后。之前<em>found</em>就变成了<em>ready to install</em>  。next  不多bibi。<img src="10.png" alt="10"></h5></li>
-<li><h5 id="yes。"><a href="#yes。" class="headerlink" title="yes。"></a>yes。<img src=".png" alt="11"></h5></li>
-<li><h5 id="next三连-最后点击OK。"><a href="#next三连-最后点击OK。" class="headerlink" title="next三连 最后点击OK。"></a>next三连 最后点击OK。<img src="12.png" alt="12"><img src="13.png" alt="13"><img src="14.png" alt="14"><img src="15.png" alt="15"></h5></li>
+<li><h5 id="打开GNS3环境，将Security-devices一栏选中为installed-amp-Avibalabala"><a href="#打开GNS3环境，将Security-devices一栏选中为installed-amp-Avibalabala" class="headerlink" title="打开GNS3环境，将Security devices一栏选中为installed&amp;Avibalabala"></a>打开GNS3环境，将<strong><em>Security devices</em></strong>一栏选中为<strong><em>installed&amp;Avibalabala</em></strong></h5><p><img src="1.png" alt="1"></p>
+</li>
+<li><h5 id="找到下面的Cisco-ASAv"><a href="#找到下面的Cisco-ASAv" class="headerlink" title="找到下面的Cisco ASAv"></a>找到下面的Cisco ASAv</h5><p><img src="2.png" alt="2"></p>
+</li>
+<li><h5 id="将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。"><a href="#将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。" class="headerlink" title="将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。"></a>将ASAv拖到左边空白的区域，此时会弹出ASAv的设置框。</h5><p><img src="3.png" alt="3"></p>
+</li>
+<li><h5 id="next-不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote-server，这里注意一下，run-on-这一栏，填的就是-之前我说的-server里面的名字。不清楚的，回看GNS3安装步骤。"><a href="#next-不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote-server，这里注意一下，run-on-这一栏，填的就是-之前我说的-server里面的名字。不清楚的，回看GNS3安装步骤。" class="headerlink" title="next  不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote server，这里注意一下，run on 这一栏，填的就是 之前我说的 server里面的名字。不清楚的，回看GNS3安装步骤。"></a>next  不解释。完了之后，会选择服务器，因为我们是用的GNS3VM所以就安装在remote server，这里注意一下，run on 这一栏，填的就是 之前我说的 server里面的名字。不清楚的，回看GNS3安装步骤。</h5><p>![4]4.png)</p>
+</li>
+<li><h5 id="next不解释。"><a href="#next不解释。" class="headerlink" title="next不解释。"></a>next不解释。</h5><p><img src="5.png" alt="5"></p>
+</li>
+<li><h5 id="这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。"><a href="#这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。" class="headerlink" title="这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。"></a>这里我们选择ASAv981。点开左边小箭头后，下面露出了需要导入的文件的名字。</h5><p><img src="6.png" alt="6"></p>
+</li>
+<li><h5 id="我们选中asav981-qcow2，左下角就出现import按钮。"><a href="#我们选中asav981-qcow2，左下角就出现import按钮。" class="headerlink" title="我们选中asav981.qcow2，左下角就出现import按钮。"></a>我们选中asav981.qcow2，左下角就出现<em>import</em>按钮。</h5><p><img src="7.png" alt="7"></p>
+</li>
+<li><h5 id="我们点击import之后，选择本地的asav981-qcow2文件，然后确定。"><a href="#我们点击import之后，选择本地的asav981-qcow2文件，然后确定。" class="headerlink" title="我们点击import之后，选择本地的asav981.qcow2文件，然后确定。"></a>我们点击import之后，选择本地的asav981.qcow2文件，然后确定。</h5><p><img src="8.png" alt="8"></p>
+</li>
+<li><h5 id="next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。"><a href="#next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。" class="headerlink" title="next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。"></a>next之后，他就会自己导入了，这里判断我们之前步骤是否正确有两个现象。有图有真相。</h5><p><img src="9.png" alt="9"></p>
+</li>
+<li><h5 id="进度条跑完以后。之前found就变成了ready-to-install-。next-不多bibi。"><a href="#进度条跑完以后。之前found就变成了ready-to-install-。next-不多bibi。" class="headerlink" title="进度条跑完以后。之前found就变成了ready to install  。next  不多bibi。"></a>进度条跑完以后。之前<em>found</em>就变成了<em>ready to install</em>  。next  不多bibi。</h5><p><img src="10.png" alt="10"></p>
+</li>
+<li><h5 id="yes。"><a href="#yes。" class="headerlink" title="yes。"></a>yes。</h5><p><img src=".png" alt="11"> </p>
+</li>
+<li><h5 id="next三连-最后点击OK。"><a href="#next三连-最后点击OK。" class="headerlink" title="next三连 最后点击OK。"></a>next三连 最后点击OK。</h5><p><img src="12.png" alt="12"><br><img src="13.png" alt="13"><br><img src="14.png" alt="14"><br><img src="15.png" alt="15"></p>
+</li>
 <li><h5 id="然后我们回到主页面，将Security-devices改回为installde-appliances"><a href="#然后我们回到主页面，将Security-devices改回为installde-appliances" class="headerlink" title="然后我们回到主页面，将Security devices改回为installde appliances    "></a>然后我们回到主页面，将<em>Security devices</em>改回为<em>installde appliances</em>    <img src="16.png" alt="16"></h5></li>
-<li><h5 id="可以看到，此时下面就出现了我们添加的ASAv981设备了。"><a href="#可以看到，此时下面就出现了我们添加的ASAv981设备了。" class="headerlink" title="可以看到，此时下面就出现了我们添加的ASAv981设备了。"></a>可以看到，此时下面就出现了我们添加的ASAv981设备了。<img src="17.png" alt="17"></h5></li>
-<li><h5 id="拖出一个来，开机测试一下。-可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。"><a href="#拖出一个来，开机测试一下。-可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。" class="headerlink" title="拖出一个来，开机测试一下。 可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。"></a>拖出一个来，开机测试一下。 可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。<img src="18.png" alt="18"></h5></li>
-<li><h5 id="我们进入全局配置模式试一下。"><a href="#我们进入全局配置模式试一下。" class="headerlink" title="我们进入全局配置模式试一下。 "></a>我们进入全局配置模式试一下。 <img src="19.png" alt="19"><img src="20.png" alt="20"></h5></li>
-<li><h5 id="好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在-模式下，输入命令，copy-disk0：-coredumpinfo-coredump-cfg-use-ttyS0"><a href="#好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在-模式下，输入命令，copy-disk0：-coredumpinfo-coredump-cfg-use-ttyS0" class="headerlink" title="好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在#模式下，输入命令，copy disk0：/coredumpinfo/coredump.cfg use_ttyS0"></a>好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在#模式下，输入命令，copy disk0：/coredumpinfo/coredump.cfg use_ttyS0<img src="21.png" alt="21"></h5><p>[^这里我的终端是putty，如果说你们关联的SecureCRT，或者Xshell，那么终端启动时就是CRT或者Xhell]: </p>
+<li><h5 id="可以看到，此时下面就出现了我们添加的ASAv981设备了。"><a href="#可以看到，此时下面就出现了我们添加的ASAv981设备了。" class="headerlink" title="可以看到，此时下面就出现了我们添加的ASAv981设备了。"></a>可以看到，此时下面就出现了我们添加的ASAv981设备了。</h5><p><img src="17.png" alt="17"></p>
+</li>
+<li><h5 id="拖出一个来，开机测试一下。-可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。"><a href="#拖出一个来，开机测试一下。-可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。" class="headerlink" title="拖出一个来，开机测试一下。 可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。"></a>拖出一个来，开机测试一下。 可以看到。能够正常开机了。这里会重启一次，时间比较长，等一会就行。</h5><p><img src="18.png" alt="18"></p>
+</li>
+<li><h5 id="我们进入全局配置模式试一下。"><a href="#我们进入全局配置模式试一下。" class="headerlink" title="我们进入全局配置模式试一下。"></a>我们进入全局配置模式试一下。</h5><p><img src="19.png" alt="19"><br><img src="20.png" alt="20"></p>
+</li>
+<li><h5 id="好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在-模式下，输入命令，copy-disk0：-coredumpinfo-coredump-cfg-use-ttyS0"><a href="#好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在-模式下，输入命令，copy-disk0：-coredumpinfo-coredump-cfg-use-ttyS0" class="headerlink" title="好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在#模式下，输入命令，copy disk0：/coredumpinfo/coredump.cfg use_ttyS0"></a>好了，上面这几步，我们已经成功安装了ASAv981，但是，他是vnc连接的，vnc不太好用，我们将他改成telnet，用putty连接。在#模式下，输入命令，copy disk0：/coredumpinfo/coredump.cfg use_ttyS0</h5><p><img src="21.png" alt="21"></p>
+<p>[^这里我的终端是putty，如果说你们关联的SecureCRT，或者Xshell，那么终端启动时就是CRT或者Xhell]: </p>
 </li>
 </ol>
 <ol start="18">
-<li><h5 id="然后一路回车。"><a href="#然后一路回车。" class="headerlink" title="然后一路回车。"></a>然后一路回车。<img src="22.png" alt="22"></h5></li>
-<li><h5 id="然后-wr保存一下。"><a href="#然后-wr保存一下。" class="headerlink" title="然后 wr保存一下。"></a>然后 wr保存一下。<img src="23.png" alt="23"></h5></li>
-<li><h5 id="然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。"><a href="#然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。" class="headerlink" title="然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。"></a>然后我们关掉设备，右键点击asav，选中第一个<em>configure</em>，对设备进行配置。<img src="24.png" alt="24"></h5></li>
-<li><h5 id="vCPUs-可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet-。然后OK。"><a href="#vCPUs-可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet-。然后OK。" class="headerlink" title="vCPUs 可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet 。然后OK。"></a>vCPUs 可以给到2，这样启动能快一些。然后最下边一栏，将<em>vnc</em>改为<em>telnet</em> 。然后OK。<img src="25.png" alt="25"></h5></li>
-<li><h5 id="最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。"><a href="#最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。" class="headerlink" title="最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。"></a>最后我们<em>start</em>设备，这时候，弹出的就不是VNC终端了，而是putty终端。<img src="26.png" alt="26"></h5></li>
-<li><h5 id="当当当当！！！可以说时很舒服了。"><a href="#当当当当！！！可以说时很舒服了。" class="headerlink" title="当当当当！！！可以说时很舒服了。"></a>当当当当！！！可以说时很舒服了。<img src="27.png" alt="27"></h5></li>
-<li><h5 id="同样，这里也会重启一次，耐心等待一下，时间比较长。"><a href="#同样，这里也会重启一次，耐心等待一下，时间比较长。" class="headerlink" title="同样，这里也会重启一次，耐心等待一下，时间比较长。"></a>同样，这里也会重启一次，耐心等待一下，时间比较长。<img src="28.png" alt="28"></h5></li>
-<li><h5 id="最后来测试一下。进入全局配置模式。"><a href="#最后来测试一下。进入全局配置模式。" class="headerlink" title="最后来测试一下。进入全局配置模式。"></a>最后来测试一下。进入全局配置模式。<img src="29.png" alt="29"></h5><hr>
+<li><h5 id="然后一路回车。"><a href="#然后一路回车。" class="headerlink" title="然后一路回车。"></a>然后一路回车。</h5><p><img src="22.png" alt="22"></p>
+</li>
+<li><h5 id="然后-wr保存一下。"><a href="#然后-wr保存一下。" class="headerlink" title="然后 wr保存一下。"></a>然后 wr保存一下。</h5><p><img src="23.png" alt="23"></p>
+</li>
+<li><h5 id="然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。"><a href="#然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。" class="headerlink" title="然后我们关掉设备，右键点击asav，选中第一个configure，对设备进行配置。"></a>然后我们关掉设备，右键点击asav，选中第一个<em>configure</em>，对设备进行配置。</h5><p><img src="24.png" alt="24"></p>
+</li>
+<li><h5 id="vCPUs-可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet-。然后OK。"><a href="#vCPUs-可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet-。然后OK。" class="headerlink" title="vCPUs 可以给到2，这样启动能快一些。然后最下边一栏，将vnc改为telnet 。然后OK。"></a>vCPUs 可以给到2，这样启动能快一些。然后最下边一栏，将<em>vnc</em>改为<em>telnet</em> 。然后OK。</h5><p><img src="25.png" alt="25"></p>
+</li>
+<li><h5 id="最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。"><a href="#最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。" class="headerlink" title="最后我们start设备，这时候，弹出的就不是VNC终端了，而是putty终端。"></a>最后我们<em>start</em>设备，这时候，弹出的就不是VNC终端了，而是putty终端。</h5><p><img src="26.png" alt="26"></p>
+</li>
+<li><h5 id="当当当当！！！可以说时很舒服了。"><a href="#当当当当！！！可以说时很舒服了。" class="headerlink" title="当当当当！！！可以说时很舒服了。"></a>当当当当！！！可以说时很舒服了。</h5><p><img src="27.png" alt="27"></p>
+</li>
+<li><h5 id="同样，这里也会重启一次，耐心等待一下，时间比较长。"><a href="#同样，这里也会重启一次，耐心等待一下，时间比较长。" class="headerlink" title="同样，这里也会重启一次，耐心等待一下，时间比较长。"></a>同样，这里也会重启一次，耐心等待一下，时间比较长。</h5><p><img src="28.png" alt="28"></p>
+</li>
+<li><h5 id="最后来测试一下。进入全局配置模式。"><a href="#最后来测试一下。进入全局配置模式。" class="headerlink" title="最后来测试一下。进入全局配置模式。"></a>最后来测试一下。进入全局配置模式。</h5><p><img src="29.png" alt="29"></p>
+<hr>
 <h3 id="注意了，父老乡亲们！！！！"><a href="#注意了，父老乡亲们！！！！" class="headerlink" title="注意了，父老乡亲们！！！！"></a>注意了，父老乡亲们！！！！</h3><h4 id="一、因为我们没有ASAv的激活码，所以，设备流量会有限制，但是不会妨碍我们足哦实验，虽然他会一直弹出提示，很烦人，我们忽略就好。"><a href="#一、因为我们没有ASAv的激活码，所以，设备流量会有限制，但是不会妨碍我们足哦实验，虽然他会一直弹出提示，很烦人，我们忽略就好。" class="headerlink" title="一、因为我们没有ASAv的激活码，所以，设备流量会有限制，但是不会妨碍我们足哦实验，虽然他会一直弹出提示，很烦人，我们忽略就好。"></a>一、因为我们没有ASAv的激活码，所以，设备流量会有限制，但是不会妨碍我们足哦实验，虽然他会一直弹出提示，很烦人，我们忽略就好。</h4><h4 id="二、没有密码，直接回车就进入了。"><a href="#二、没有密码，直接回车就进入了。" class="headerlink" title="二、没有密码，直接回车就进入了。"></a>二、没有密码，直接回车就进入了。</h4><h4 id="三、转载请注明出处！！有啥问题欢迎提出，有什么更好的方案，欢迎拜访我群675342331"><a href="#三、转载请注明出处！！有啥问题欢迎提出，有什么更好的方案，欢迎拜访我群675342331" class="headerlink" title="三、转载请注明出处！！有啥问题欢迎提出，有什么更好的方案，欢迎拜访我群675342331"></a>三、转载请注明出处！！有啥问题欢迎提出，有什么更好的方案，欢迎拜访我群675342331</h4></li>
 </ol>
 
