@@ -172,14 +172,14 @@
             <div class="typo" style="padding: 3rem;">
                 <p>这篇博客主要是收集平GNS3经常出的一些错误，并将我的解决方案写在下面，有什么更好的解决方法，希望大佬们斧正，这是我的群号675342331大家可以加群一起交流。这是之前的GNS3的搭建的博客<a href="http://www.june.ac.cn/2018/06/29/GNS3%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE//" target="_blank" rel="noopener">GNS3关联GNS3VM虚拟机+wireshark+SecureCRT</a>。如果有问题，主页右上角有我QQ。欢迎斧正。<br>好了，这篇也不会断更。</p>
 <h2><span id="1-在上传镜像时没有出现进度条">1、在上传镜像时，没有出现进度条。</span></h2><p>出现这种问题是跟主机网络有关。若没有出现进度条(也可能没有进度条，但是不会显示图标)，上传完成之后，镜像是这样的图标：</p>
-<p><img src="D:\blog\source\_posts\GNS3排错\1.png" alt="1"></p>
+<p><img src="1.png" alt="1"></p>
 <p>而正常的上传接术之后是这样的：</p>
-<p><img src="D:\blog\source\_posts\GNS3排错\7.png" alt="2"></p>
+<p><img src="7.png" alt="2"></p>
 <p>解决方法如下：</p>
-<p><img src="D:\blog\source\_posts\GNS3排错\2.png" alt="3"></p>
+<p><img src="2.png" alt="3"></p>
 <p><img src="D:\blog\source\_posts\GNS3排错\3.png" alt="4"></p>
 <p><img src="D:\blog\source\_posts\GNS3排错\4.png" alt="5"></p>
-<p><img src="D:\blog\source\_posts\GNS3排错\5.png" alt=""></p>
+<p><img src="D:\blog\source\_posts\GNS3排错\5.png" alt="6"></p>
 <p>然后重启电脑，再添加设备，就行啦。</p>
 <h2><span id="2-关于gns3vm的直接升级-不需要再重新导入新的镜像了">2、关于GNS3VM的直接升级。（不需要再重新导入新的镜像了。）</span></h2><p>首先在启动之前，给虚拟机分配一个网卡，设置为nat模式，保证虚拟机能访问外网：</p>
 <p><img src="D:\blog\source\_posts\GNS3排错\10.png" alt="12"></p>
